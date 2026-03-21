@@ -1,53 +1,43 @@
 # Zirodelta
 
-Delta-neutral cross-exchange funding rate arbitrage protocol on Solana.
+Prediction markets for crypto funding rates. Trade the crowd, not the price.
 
-Automated. Transparent. AI-operated.
+## Products
 
-## What We Do
+### [Settled](https://settled.pro) — Funding Rate Prediction Markets
 
-Zirodelta captures yield from perpetual futures funding rate differentials across exchanges. The engine opens perfectly hedged positions — long on one exchange, short on another — collecting the spread while maintaining zero directional exposure.
+Binary prediction markets on whether crypto funding rates will be positive or negative at the next settlement. Markets auto-create, auto-resolve from live exchange data, and auto-pay winners in USDC on Solana.
 
-No bets on price. Pure yield extraction from market microstructure.
+- 3,700+ perpetual futures tracked across 5 exchanges
+- Markets settle every 1-8 hours — no waiting days or weeks
+- Proprietary pricing model calibrated on historical settlement data
+- No price exposure, no liquidation — pure crowd positioning
 
-## How It Works
+### [Zidee](https://t.me/ZideeBot) — Funding Rate Sniper Bot
 
-1. **Scan** — Monitor funding rates across 31 exchanges, 3,600+ symbols, every cycle
-2. **Select** — Rank opportunities by annualized delta, filter by liquidity and spread
-3. **Hedge** — Open simultaneous long/short positions across exchanges
-4. **Guard** — Monitor rate inversions in real-time, exit before yield turns negative
-5. **Sweep** — Return capital to treasury after position close, capture realized P&L
+Telegram bot that detects extreme funding rate opportunities and executes delta-neutral hedges (spot + perp) in real-time. Open before settlement, collect funding, close after.
 
-The entire pipeline runs autonomously with AI-operated monitoring, issue detection, and self-healing code deployment.
+## Data & Research
 
-## Architecture
+We operate one of the largest private funding rate datasets in crypto — spanning 6 exchanges since 2019. We also track funding interval changes in real-time, detecting when exchanges silently modify settlement frequencies.
 
-| Component | Purpose |
-|-----------|---------|
-| **Beta-X1 Engine** | Core arbitrage engine — capacity scanning, hedge execution, funding tracking, smart exit |
-| **Transparency Dashboard** | Real-time visibility into positions, funding payments, hedge history, engine health |
-| **Vault** | User-facing yield product — deposit stables, earn from funding rate arbitrage |
+- [Funding Rate History](https://settled.pro/rates) — 3,700+ pairs across 5 exchanges
+- [Interval Change Tracker](https://settled.pro/funding-intervals) — 7,800+ regime changes detected
+- [API Documentation](https://docs.settled.pro) — Public endpoints for market data
+- [Learn](https://learn.settled.pro) — Guides on funding rates and prediction markets
 
 ## Links
 
-- [zirodelta.com](https://zirodelta.com) — Main site
-- [zirodelta.ag](https://zirodelta.ag) — Vault product
-- [transparency.zirodelta.ag](https://transparency.zirodelta.ag) — Live engine dashboard
-- [zirodelta.org](https://zirodelta.org) — Holder hub & analytics
+- [settled.pro](https://settled.pro) — Trade
+- [faucet.settled.pro](https://faucet.settled.pro) — Free $1,000 test USDC
+- [learn.settled.pro](https://learn.settled.pro) — Learn
+- [docs.settled.pro](https://docs.settled.pro) — API Docs
 - [@zirodelta](https://x.com/zirodelta) — X/Twitter
 
-## Key Numbers
+## Stack
 
-- 31 exchanges connected
-- 3,600+ perpetual symbols tracked
-- 3.1M+ funding rate snapshots collected
-- 93 days of continuous data (and counting)
-- 60/25/15 revenue split (vault yield / operations / buyback burn)
-
-## Team
-
-Built lean by design. Strategy discovery + AI-augmented development and operations.
+Go · Next.js · Solana · PostgreSQL · ClickHouse · Redis · Docker
 
 ---
 
-*Building in public. Running in production.*
+*Building in public. Settling in production.*
